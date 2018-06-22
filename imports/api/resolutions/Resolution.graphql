@@ -1,0 +1,9 @@
+# name
+# createdAt (but no date type in Apollo)
+# [todoId] (special, will set this up later)
+
+# `!` means that field is required
+type Resolution {
+  _id: String!
+  name: String!
+}
