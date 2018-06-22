@@ -64,4 +64,12 @@ Will return results like:
 }
 ```
 
-Left off at: https://www.youtube.com/watch?v=cLCnmYEupkk
+## Organizing Resolvers
+
+Don't want all queries in `imports/startup/server/register-api.js`. Better to have them organized per logical function, eg: `imports/api/resolutions/resolvers.js`.
+
+Resolver is a query. But `Query` is just one type of resolver, there are many more.
+
+Use lodash to merge `npm i --save lodash`.
+
+Left off at https://www.youtube.com/watch?v=DMvrfjRXlGQ
