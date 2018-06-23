@@ -1,3 +1,15 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Full-stack Graph QL with Apollo, Meteor & React](#full-stack-graph-ql-with-apollo-meteor--react)
+  - [GraphiQL](#graphiql)
+  - [Organizing Resolvers](#organizing-resolvers)
+  - [Adding a Database](#adding-a-database)
+  - [Mutations](#mutations)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Full-stack Graph QL with Apollo, Meteor & React
 
 > Notes from Youtube LevelUpTuts [series](https://www.youtube.com/watch?v=m0TC5DcFHDY&t=384s&list=PL_vZ4VzURIjxGu5N7wqNGM6R8h35xa9eV&index=2)
@@ -72,4 +84,14 @@ Resolver is a query. But `Query` is just one type of resolver, there are many mo
 
 Use lodash to merge `npm i --save lodash`.
 
-Left off at https://www.youtube.com/watch?v=DMvrfjRXlGQ
+## Adding a Database
+
+Recall Meteor already comes with Mongo, so `import { Mongo } from 'meteor/mongo';`
+
+For this demo, graphql schema will mirror collection structure in db but doesn't have to be one to one mapping.
+
+Think of graphql schema as public API.
+
+To hook up db, return `Resolutions.find({}).fetch()` in `resolvers.js` instead of hard-coded data.
+
+## Mutations

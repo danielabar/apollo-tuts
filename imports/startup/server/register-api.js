@@ -24,9 +24,6 @@ const resolver = {
 
 const resolvers = merge(resolver, ResolutionsResolvers)
 
-// temp debug
-console.log(resolvers);
-
 const schema = makeExecutableSchema({
   typeDefs,
   resolvers
